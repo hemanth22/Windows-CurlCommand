@@ -1,0 +1,26 @@
+name: PowerShell Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run PowerShell Script
+      shell: powershell
+      run: |
+        # Run your PowerShell script here
+        # For example, you can run a specific script file:
+        .\curlexample.ps1
+        
+        # Or you can run PowerShell commands directly:
+        # Write-Host "Hello, World!"
+
+    # Add more steps as needed for your workflow
